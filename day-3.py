@@ -1,4 +1,4 @@
-############tuples#############stores multiple values in single variables############list mutable and tuples immutable#####################
+###########tuples#############stores multiple values in single variables############list mutable and tuples immutable#####################
 student=("ram","sam","bheem")
 print(student[2])
 
@@ -149,7 +149,7 @@ length=lambda a:len(a)
 print(length("himani"))
 
 #########file handling##############
-write in a file
+##write in a file
 file=open("student.txt","w")
 file.write("hello himani")
 file.close()
@@ -219,3 +219,5 @@ except:
     print("error")
 else:
     print("success")
+
+    
