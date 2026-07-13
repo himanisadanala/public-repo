@@ -81,7 +81,7 @@ form{
     border:2px solid black;
     margin:30px;
     background-color:burlywood;
-}*/
+}
 
 
 .flex{
@@ -122,10 +122,10 @@ form{
 @media(max-width:60px){
     .cards{
     grid-template-columns:1fr;
-}
-.screen-label{
+    }
+    .screen-label{
     background-color:green;
-}
+    } 
 
 }
 
