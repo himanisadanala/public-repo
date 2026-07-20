@@ -1,24 +1,24 @@
 *{
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 
 }
-/* ===================
-     body
-=================== */
+/*=============
+    body
+=============*/
 body{
     font-family: Arial, Helvetica, sans-serif;
     background: #f4f4f4;
     color: #333;
 }
-/* =====================
-      NAVBAR
-====================== */
+/*=======
+     navbar
+=========*/
 nav{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
     background: #2c3e50;
     padding: 15px 20px;
 }
@@ -39,9 +39,9 @@ nav a:hover{
     color: orange;
 }
 
-/*=======================
-      CONTAINER
-=======================*/
+/*=========
+      container
+========*/
 .container{
     max-width: 900px;
     margin: 30px auto;
@@ -49,12 +49,12 @@ nav a:hover{
 }
 h1,
 h2,
-h3 {
+h3{
     margin-bottom: 15px;
 }
-/*========================
-    BOOK LIST
-===========================*/
+/*==========
+    book list
+======*/
 .book-list{
     display: flex;
     flex-wrap: wrap;
@@ -79,7 +79,7 @@ h3 {
 }
 
 .book-card p{
-    margin: 8px 0;
+    margin: 8px o;
 }
 
 .book-card a{
@@ -87,9 +87,9 @@ h3 {
     text-decoration: none;
 }
 
-/*==========================
-   BUTTONS
-=============================*/
+/*=========
+buttons
+======*/
 .btn{
     display: inline-block;
     padding: 8px 15px;
@@ -101,9 +101,9 @@ h3 {
 .btn:hover{
     background: #34495e;
 }
-/*==========================
-   FORMS
-============================*/
+/*==
+forms
+=====*/
 
 form p{
     margin-bottom: 12px;
@@ -119,24 +119,24 @@ form input,
 form textarea,
 form select{
     width: 100%;
-    padding:8px;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-/*===========================
-   REVIEWS
-=============================*/
+/*========
+reviews
+===*/
 .review{
     background: white;
     padding: 12px;
     margin-bottom: 12px;
     border-left: 4px solid orange;
-    border-radius: 5px;
+    border-radius: 5px; 
 }
-/*============================
-    MESSAGES
-============================*/
-.message {
+/*========
+      messages
+==========*/
+.message{
     list-style: none;
     margin-bottom: 15px;
 }
@@ -152,9 +152,9 @@ form select{
     color: darkred;
 }
 
-/*=====================
-   LOGINE BOX
-========================*/
+/*=============
+login box
+======*/
 .login-box{
     width: 350px;
     margin: 60px auto;

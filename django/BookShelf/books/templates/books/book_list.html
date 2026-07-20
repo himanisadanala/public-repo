@@ -10,16 +10,16 @@
 
     {% if books %}
         <div class="book-list">
-            {% for book in books%}  
+            {% for book in books %}
                 <div class="book-card">
                     {% if book.cover %}
-                        <img src="{{ book.cover.url }}" alt="{{ book.title}} cover">
+                        <img src="{{ book.cover.url }}" alt="{{ book.title }} cover">
                     {% endif %}
-                    <h3>{{ book.title}}</h3>
+                    <h3>{{ book.title }}</h3>
                     <p>by {{ book.author }}</p>
-                    {% if book.avg__rating %}
-                        <p> {{ book.avg_rating|floatformat:1 }}</p>
-                    {% else %}   
+                    {% if book.avg_rating %}
+                        <p>⭐ {{ book.avg_rating|floatformat:1 }} / 5</p>
+                    {% else %}
                         <p>No Reviews yet</p>
                     {% endif %}
                     <a href="{% url 'book_detail' book.pk %}">View Details</a>
@@ -27,6 +27,6 @@
             {% endfor %}
         </div>
     {% else %}
-        <p>No books added yet Be the first!</p>
+        <p>No books added yet. Be the first!</p>
     {% endif %}
 {% endblock %}

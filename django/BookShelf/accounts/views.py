@@ -13,7 +13,7 @@ def login_view(request):
             return redirect('book_list')
         else:
             messages.error(request,'invalid username or password.')
-    return render(request,'aconys/login.html',{'form':form})
+    return render(request,'accounts/login.html',{'form':form})
 #Create your viwes here.
 def logout_view(request):
     logout(request)

@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
-{% block title %}Write a review{% endblock %}
+{% block title %}Write a Review{% endblock %}
 {% block content %}
     <h1>Review: {{ book.title }}</h1>
     <p>by {{ book.author }}</p>
     <br>
     <form method="POST">
         {% csrf_token %}
-        {{ form.as_p}}
+        {{ form.as_p }}
         <button class="btn" type="submit">Submit Review</button>
-        <a href="{%url 'book_detail' book.pk}" style="margin-left: 10px;">Cancel</a>
+        <a href="{% url 'book_detail' book.pk %}" style="margin-left: 10px;">Cancel</a>
     </form>
 {% endblock %}
