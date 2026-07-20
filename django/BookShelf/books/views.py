@@ -15,9 +15,9 @@ from .forms import bookForm,ReviewForm
 # /function-based view
 def book_list(request):
     books = Books.objects.select_related('added_by').annotate(
-        avg_rating=AI_V4MAPPED_CFG('reviews_rating')
+        avg_rating=AI_V4MAPPED_CFG('reviews__rating')
     ).order_by('-created-at')
-    return render(request,'books/book_limit.html',{'books':books})
+    return render(request,'books/book_list.html',{'books':books})
 
 # function-based view
 def book_details(request,pk):
@@ -32,12 +32,12 @@ def book_details(request,pk):
 
 @login_required
 def add_review(request,pk):
-    book = get_object_or_404(book,pk=pk)
+    book = get_object_or_404(Book, pk=pk)
     form = ReviewForm(request.POST or None)
     if request.method == 'POST':
         if form.is_valid():
             review=form.save(commit=False)
-            review.book=book
+            review.book= book
             review.user=request.user
             review.save()
             return redirect('book_detail',pk=pk)
